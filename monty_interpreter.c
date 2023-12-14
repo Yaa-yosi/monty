@@ -17,12 +17,15 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
+		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 	monty_file = fopen(argv[1], "r");
 	if (!monty_file)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+		free_stack(stack);
+		fclose(monty_file);
 		exit(EXIT_FAILURE);
 	}
 	while (1)
@@ -30,15 +33,15 @@ int main(int argc, char *argv[])
 		content = malloc(size);
 		if (!content)
 		{
-			fprintf(stderr, "Error: Memory allocation failed\n");
+			fprintf(stderr, "Error: malloc failed\n");
+			free_stack(stack);
+			fclose(monty_file);
 			exit(EXIT_FAILURE);
 		}
 		if (fgets(content, size, monty_file) == NULL)
 		{
 			free(content);
-			/*break;*/
-			fprintf(stderr, "Error: fgets failed\n");
-			exit(EXIT_FAILURE);
+			break;
 		}
 		global.line_content = content;
 		count++;
