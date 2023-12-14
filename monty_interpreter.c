@@ -11,7 +11,6 @@ int main(int argc, char *argv[])
 	char *content = NULL;
 	FILE *monty_file;
 	size_t size = 100;
-	/*ssize_t readLine = 1;*/
 	stack_t *stack = NULL;
 	unsigned int count = 0;
 
@@ -26,44 +25,25 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	/*while (readLine > 0)
-	  {
-	  readLine = getline(&content, &size, monty_file);
-	  if (readLine == -1)
-	  break;
-	  global.line_content = content;
-	  count++;
-	  if (readLine > 0)
-	  {
-	  exec(content, &stack, count, monty_file);
-	  }
-	  free(content);
-	  }
-	  free_stack(stack);
-	  fclose(monty_file);
-	  return (0);*/
-	while (1) {
+	while (1)
+	{
 		content = malloc(size);
-		if (!content) {
+		if (!content)
+		{
 			fprintf(stderr, "Error: Memory allocation failed\n");
 			exit(EXIT_FAILURE);
 		}
-		if (fgets(content, size, monty_file) == NULL) {
-			free(content); 
+		if (fgets(content, size, monty_file) == NULL)
+		{
+			free(content);
 			break;
 		}
-
 		global.line_content = content;
 		count++;
 		exec(content, &stack, count, monty_file);
-
-
 		free(content);
 	}
-
 	free_stack(stack);
 	fclose(monty_file);
-
-	return 0;
-
+	return (0);
 }

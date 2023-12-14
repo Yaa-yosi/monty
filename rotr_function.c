@@ -18,7 +18,7 @@ void rotr(stack_t **head, unsigned int line_no)
 	tmp2 = tmp->prev;
 	(*head)->prev = tmp;
 	tmp->prev = NULL;
-	tmp->next = (*head)->next;
+	tmp->next = *head;
 	tmp2->next = NULL;
 	*head = tmp;
 }
