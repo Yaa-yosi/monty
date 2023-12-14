@@ -4,7 +4,7 @@
  * @head: Double head pointer
  * @n: element to be added to stack
  */
-void stack_t addnode(stack_t **head, int n)
+void addnode(stack_t **head, int n)
 {
 	stack_t *newnode;
 
@@ -20,5 +20,5 @@ void stack_t addnode(stack_t **head, int n)
 	newnode->n = n;
 	newnode->prev = NULL;
 	newnode->next = *head;
-	*head = new_node;
+	*head = newnode;
 }

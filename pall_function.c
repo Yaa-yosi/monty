@@ -1,4 +1,4 @@
-#include "lists.h"
+#include "monty.h"
 /**
  *pall - prints all the elements of a stack.
  *@head: pointer to data
@@ -6,7 +6,7 @@
  */
 void pall(stack_t **head, unsigned int line_no)
 {
-	stack_ *temp;
+	stack_t *temp;
 	(void)line_no;
 
 	temp = *head;

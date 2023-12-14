@@ -1,10 +1,10 @@
 #include "monty.h"
 /**
- * stack - switches to stack
+ * _stack - switches to stack
  * @head: double pointer to stack
  * @line_no: line number
  */
-void stack(stack_t **head, unsigned int line_no)
+void _stack(stack_t **head, unsigned int line_no)
 {
 	(void)head;
 	(void)line_no;

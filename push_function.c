@@ -35,5 +35,6 @@ void push(stack_t **head, unsigned int line_no)
 	num = atoi(global.arg);
 	if (global.flag == 0)
 		addnode(head, num);
-	addnodeEnd(head, num);
+	else
+		addnodeEnd(head, num);
 }

@@ -11,7 +11,7 @@ void pchar(stack_t **head, unsigned int line_no)
 	tmp = *head;
 	if (tmp)
 	{
-		if (temp->n < 0 || tmp->n > 127)
+		if (tmp->n < 0 || tmp->n > 127)
 		{
 			fprintf(stderr, "L%d: can't pchar, value out of range\n", line_no);
 			fclose(global.file);
