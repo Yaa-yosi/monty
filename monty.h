@@ -49,4 +49,20 @@ typedef struct global_s
 } global_t;
 extern global_t global
 
+void addnode(stack_t **head, int n);
+void push(stack_t **head, unsigned int line_no);
+void pall(stack_t **head, unsigned int line_no);
+void pint(stack_t **head, unsigned int line_no);
+void swap(stack_t **head, unsigned int line_no);
+void pop(stack_t **head, unsigned int line_no);
+void add(stack_t **head, unsigned int line_no);
+void sub(stack_t **head, unsigned int line_no);
+void add(stack_t **head, unsigned int line_no);
+void div(stack_t **head, unsigned int line_no);
+void mul(stack_t **head, unsigned int line_no);
+void mod(stack_t **head, unsigned int line_no);
+void pchar(stack_t **head, unsigned int line_no);
+void pstr(stack_t **head, unsigned int line_no);
+void rotl(stack_t **head, unsigned int line_no);
+
 #endif
