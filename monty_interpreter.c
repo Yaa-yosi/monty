@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
 	char *content = NULL;
 	FILE *monty_file;
-	size_t size = 1024;
+	size_t size = MAX_LENGTH;
 	stack_t *stack = NULL;
 	unsigned int count = 0;
 

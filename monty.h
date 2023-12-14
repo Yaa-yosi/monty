@@ -7,6 +7,8 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
+
+#define MAX_LENGTH 256
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
