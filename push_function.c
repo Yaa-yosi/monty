@@ -33,5 +33,7 @@ void push(stack_t **head, unsigned int line_no)
 		exit(EXIT_FAILURE);
 	}
 	num = atoi(global.arg);
-	addnode(head, num);
+	if (global.flag == 0)
+		addnode(head, num);
+	addnodeEnd(head, num);
 }

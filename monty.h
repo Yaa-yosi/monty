@@ -46,6 +46,7 @@ typedef struct global_s
 {
 	char *arg, *line_content;
 	FILE *file;
+	int flag;
 } global_t;
 extern global_t global
 
@@ -64,5 +65,9 @@ void mod(stack_t **head, unsigned int line_no);
 void pchar(stack_t **head, unsigned int line_no);
 void pstr(stack_t **head, unsigned int line_no);
 void rotl(stack_t **head, unsigned int line_no);
+void rotr(stack_t **head, unsigned int line_no);
+void stack(stack_t **head, unsigned int line_no);
+void queue(stack_t **head, unsigned int line_no);
+void addnodeEnd(stack_t **head, int n);
 
 #endif
