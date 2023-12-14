@@ -36,7 +36,9 @@ int main(int argc, char *argv[])
 		if (fgets(content, size, monty_file) == NULL)
 		{
 			free(content);
-			break;
+			/*break;*/
+			fprintf(stderr, "Error: fgets failed\n");
+			exit(EXIT_FAILURE);
 		}
 		global.line_content = content;
 		count++;
