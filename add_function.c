@@ -26,6 +26,6 @@ void add(stack_t **head, unsigned int line_no)
 	tmp = *head;
 	sum = tmp->n + tmp->next->n;
 	tmp->next->n = sum;
-	pop(head, line_no);
 	*head = tmp->next;
+	free(tmp);
 }
