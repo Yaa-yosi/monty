@@ -26,6 +26,6 @@ void mul(stack_t **head, unsigned int line_no)
 	tmp = *head;
 	product = tmp->n * tmp->next->n;
 	tmp->next->n = product;
-	pop(head, line_no);
 	*head = tmp->next;
+	free(tmp);
 }
