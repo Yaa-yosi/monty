@@ -35,6 +35,6 @@ void mod(stack_t **head, unsigned int line_no)
 	}
 	modulo = tmp->next->n % tmp->n;
 	tmp->next->n = modulo;
-	pop(head, line_no);
 	*head = tmp->next;
+	free(tmp);
 }
