@@ -34,6 +34,6 @@ void _div(stack_t **head, unsigned int line_no)
 	}
 	result = tmp->next->n / tmp->n;
 	tmp->next->n = result;
-	pop(head, line_no);
 	*head = tmp->next;
+	free(tmp);
 }
