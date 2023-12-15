@@ -26,6 +26,6 @@ void sub(stack_t **head, unsigned int line_no)
 	tmp = *head;
 	remainder = tmp->next->n - tmp->n;
 	tmp->next->n = remainder;
-	pop(head, line_no);
 	*head = tmp->next;
+	free(tmp);
 }
